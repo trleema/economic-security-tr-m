@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Аналіз економічної безпеки Чехії за 2015–2024 роки: ВВП, інфляція, безробіття, державний борг, зовнішня торгівля, енергетика, порівняння з пороговими значеннями.">
+  <title>Економічна безпека Чехії — аналіз показників</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Третяк <span>М. Є.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">☰ Меню</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Про автора</a></li>
+        <li><a class="active" href="country.html">Економічна безпека країни</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="container">
+      <h1>Економічна безпека Чехії</h1>
+      <p>Аналіз основних показників за 2015–2024 роки: динаміка, порівняння з пороговими значеннями, загрози та висновки.</p>
+      <div class="btns">
+        <a class="btn primary" href="#indicators">Показники</a>
+        <a class="btn" href="#charts">Графіки</a>
+        <a class="btn" href="#thresholds">Порогові значення</a>
+        <a class="btn" href="#threats">Загрози</a>
+        <a class="btn" href="#sources">Джерела</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    <section id="general">
+      <h2>Загальна інформація про країну</h2>
+      <div class="grid g2">
+        <div class="card">
+          <ul class="info-list">
+            <li><span class="k">Офіційна назва</span><span>Чеська Республіка (Чехія)</span></li>
+            <li><span class="k">Столиця</span><span>Прага</span></li>
+            <li><span class="k">Площа</span><span>близько 78,9 тис. км²</span></li>
+            <li><span class="k">Населення</span><span>близько 10,9 млн осіб</span></li>
+            <li><span class="k">Форма правління</span><span>парламентська республіка</span></li>
+            <li><span class="k">Грошова одиниця</span><span>чеська крона (CZK); євро не запроваджено</span></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Інтеграція та членство</h3>
+          <p>Чехія — член НАТО (з 1999 р.), Європейського Союзу (з 2004 р.), ОЕСР (з 1995 р.) і шенгенської зони. Економіка невелика та експортоорієнтована, тісно пов’язана з промисловістю країн ЄС, насамперед Німеччини.</p>
+          <p>Це визначає головні риси економічної безпеки країни: високу відкритість до зовнішньої торгівлі, чутливість до цін на імпортовані ресурси та залежність від зовнішнього попиту.</p>
+        </div>
+      </div>
+      <div class="grid g4" style="margin-top:16px">
+        <div class="card stat" id="st-gdp"><div class="v">—</div><div class="l">ВВП (поточні ціни)</div><div class="y"></div></div>
+        <div class="card stat" id="st-infl"><div class="v">—</div><div class="l">Інфляція</div><div class="y"></div></div>
+        <div class="card stat" id="st-unemp"><div class="v">—</div><div class="l">Безробіття</div><div class="y"></div></div>
+        <div class="card stat" id="st-debt"><div class="v">—</div><div class="l">Борг загального уряду</div><div class="y"></div></div>
+      </div>
+    </section>
+
+    <section id="indicators">
+      <h2>Основні показники економічної безпеки</h2>
+      <div class="table-wrap">
+        <table id="dataTable" aria-label="Таблиця основних показників економічної безпеки Чехії за 2015–2024 роки"></table>
+      </div>
+      <p class="note">«—» — дані відсутні. * Розрахункове значення: експорт, відкритість і коефіцієнт покриття за 2023 р. — з урахуванням торговельного балансу; сальдо поточного рахунку за 2018 та 2020–2024 рр. — як відношення сальдо в дол. США до ВВП у дол. США; урожайність 2020 р. — за обсягом виробництва та площею збирання. Показники в % ВВП, % ВНД і ц/га — за методологією Світового банку (кг/га переведено в ц/га діленням на 100).</p>
+    </section>
+
+    <section id="charts">
+      <h2>Динаміка показників</h2>
+      <div class="grid g2">
+        <div class="card chart-card"><h3>ВВП, млрд дол. США</h3><div class="chart" id="ch-gdp"></div></div>
+        <div class="card chart-card"><h3>Інфляція, %</h3><div class="chart" id="ch-infl"></div></div>
+        <div class="card chart-card"><h3>Рівень безробіття, %</h3><div class="chart" id="ch-unemp"></div></div>
+        <div class="card chart-card"><h3>Державний борг загального уряду, % ВВП</h3><div class="chart" id="ch-debt"></div></div>
+        <div class="card chart-card"><h3>Сальдо бюджету загального уряду, % ВВП</h3><div class="chart" id="ch-deficit"></div></div>
+        <div class="card chart-card"><h3>Експорт та імпорт, % ВВП</h3><div class="chart" id="ch-trade"></div></div>
+        <div class="card chart-card"><h3>Відкритість економіки, % ВВП</h3><div class="chart" id="ch-open"></div></div>
+        <div class="card chart-card"><h3>Сальдо поточного рахунку, % ВВП</h3><div class="chart" id="ch-ca"></div></div>
+        <div class="card chart-card"><h3>Валові заощадження, % ВНД</h3><div class="chart" id="ch-sav"></div></div>
+        <div class="card chart-card"><h3>Енергетична безпека, %</h3><div class="chart" id="ch-energy"></div></div>
+        <div class="card chart-card"><h3>Урожайність зернових, ц/га</h3><div class="chart" id="ch-cereal"></div></div>
+        <div class="card chart-card"><h3>Очікувана тривалість життя, років</h3><div class="chart" id="ch-life"></div></div>
+      </div>
+      <p class="note">Зелена зона на графіках — оптимальний рівень за пороговими значеннями, червона пунктирна лінія — контрольний поріг. Наведіть курсор на точку або стовпчик, щоб побачити значення.</p>
+    </section>
+
+    <section id="dynamics">
+      <h2>Аналіз динаміки показників</h2>
+      <div class="grid g2">
+        <div class="card">
+          <h3>Економічне зростання та ціни</h3>
+          <p>ВВП у поточних цінах зріс із 221,6 млрд дол. у 2017 р. до 347,0 млрд дол. у 2024 р. (+56,6 %). У 2020 р. він скоротився на 2,2 %, у 2021 р. зріс на 15,9 %, у 2023 р. — на 14,3 %, а у 2024 р. — лише на 0,6 %. Оскільки показник виражено в доларах, на нього впливає також курс крони.</p>
+          <p>Інфляція у 2015–2021 рр. повільно зростала з 0,3 % до 3,8 %, у 2022 р. досягла піку 15,1 %, у 2023 р. становила 10,7 %, а у 2024 р. повернулася до 2,4 %.</p>
+        </div>
+        <div class="card">
+          <h3>Ринок праці та населення</h3>
+          <p>Безробіття скоротилося з 5,0 % у 2015 р. до 2,0 % у 2019 р. і з того часу коливається в межах 2,2–2,8 %. Така картина свідчить про стабільний ринок праці упродовж усього періоду.</p>
+          <p>Очікувана тривалість життя зросла з 78,6 до 79,2 року у 2015–2019 рр., у 2021 р. впала до 77,2 року (період пандемії COVID-19), а у 2024 р. досягла максимуму — 79,98 року.</p>
+        </div>
+        <div class="card">
+          <h3>Державні фінанси</h3>
+          <p>Борг загального уряду знижувався з 40,0 % ВВП у 2015 р. до 30,0 % у 2019 р., але після 2020 р. різко зріс — до 44,2 % у 2022 р.; у 2023 р. він становив 44,0 %. Дефіцит бюджету у 2020 р. дорівнював 5,8 % ВВП, у 2021 р. — 5,1 %, у 2022 р. — 3,2 %, у 2023 р. — 3,7 %, тобто перевищував ліміт ЄС у 3 %.</p>
+        </div>
+        <div class="card">
+          <h3>Зовнішній сектор</h3>
+          <p>Відкритість економіки (експорт + імпорт) знизилася з 155,2 % ВВП у 2015 р. до 131,5 % у 2024 р., проте залишається дуже високою. Коефіцієнт покриття експортом імпорту весь період був у діапазоні 1,01–1,11, мінімум припав на 2022 р., коли імпорт досяг 75,5 % ВВП. Сальдо поточного рахунку було позитивним до 2020 р., а у 2021–2022 рр. перейшло у дефіцит (–2,0 % та –4,5 % ВВП), у 2024 р. становило +1,7 % ВВП.</p>
+        </div>
+        <div class="card">
+          <h3>Енергетика та агросектор</h3>
+          <p>Частка власних джерел у енергобалансі у 2015–2019 рр. знизилася з 68,4 % до 67,1 %, бо чистий імпорт енергії зріс з 31,6 % до 32,9 %. Частка відновлюваної енергії зростала з 14,5 % у 2017 р. до 17,2 % у 2021 р. Урожайність зернових коливалась між 52,0 і 63,2 ц/га без стійкого тренду.</p>
+        </div>
+        <div class="card">
+          <h3>Заощадження</h3>
+          <p>Валові заощадження зросли з 25,7 % ВНД у 2015 р. до 28,9 % у 2024 р. (мінімум 24,8 % у 2016 р.). Це створює ресурс для інвестицій і пом’якшує вплив зовнішніх шоків на економіку.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="thresholds">
+      <h2>Порівняння з пороговими значеннями</h2>
+      <div class="table-wrap">
+        <table class="thr">
+          <thead><tr><th>Показник</th><th>Значення</th><th>Оптимальний рівень</th><th>Рівень безпеки</th></tr></thead>
+          <tbody>
+            <tr><td>Інфляція, 2024 р.</td><td>2,4 %</td><td>2–3 %</td><td><span class="badge b-opt">Оптимальний</span></td></tr>
+            <tr><td>Безробіття, 2024 р.</td><td>2,6 %</td><td>до 5 %</td><td><span class="badge b-opt">Оптимальний</span></td></tr>
+            <tr><td>Коефіцієнт покриття експортом імпорту, 2024 р.</td><td>1,10</td><td>1,00–1,20</td><td><span class="badge b-opt">Оптимальний</span></td></tr>
+            <tr><td>Сальдо поточного рахунку, 2024 р.</td><td>+1,7 % ВВП</td><td>від –1,5 до +1,5 % ВВП</td><td><span class="badge b-sat">Задовільний</span></td></tr>
+            <tr><td>Валові заощадження, 2024 р.</td><td>28,9 % ВНД</td><td>30–35 %</td><td><span class="badge b-sat">Задовільний</span></td></tr>
+            <tr><td>Частка власних джерел енергії, 2019 р.</td><td>67,1 %</td><td>80 % і більше</td><td><span class="badge b-uns">Незадовільний</span></td></tr>
+            <tr><td>Частка відновлюваної енергії, 2021 р.</td><td>17,2 %</td><td>30 % і більше</td><td><span class="badge b-uns">Незадовільний</span></td></tr>
+            <tr><td>Борг центрального уряду, 2022 р.</td><td>46,8 % ВВП</td><td>до 20 % ВВП</td><td><span class="badge b-dan">Небезпечний</span></td></tr>
+            <tr><td>Відкритість економіки, 2024 р.</td><td>131,5 % ВВП</td><td>до 75 % ВВП</td><td><span class="badge b-abs">Абсолютна небезпека</span></td></tr>
+            <tr><td>Борг загального уряду, 2023 р. (критерій ЄС)</td><td>44,0 % ВВП</td><td>не більше 60 % ВВП</td><td><span class="badge b-opt">Відповідає</span></td></tr>
+            <tr><td>Дефіцит бюджету, 2023 р. (критерій ЄС)</td><td>3,7 % ВВП</td><td>не більше 3 % ВВП</td><td><span class="badge b-crit">Перевищує</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Рівні безпеки («Оптимальний», «Задовільний», «Незадовільний», «Небезпечний», «Критичний», «Абсолютна небезпека») визначено за пороговими шкалами з навчальних матеріалів дисципліни «Інформаційні технології у системі забезпечення економічної безпеки держави»; вони адаптовані для міжнародних порівнянь і не є офіційними нормативами. Критерії щодо боргу (60 % ВВП) та дефіциту бюджету (3 % ВВП) — норми Договору про Європейський Союз. Для кожного показника взято останнє доступне значення.</p>
+    </section>
+
+    <section id="threats">
+      <h2>Основні загрози економічній безпеці</h2>
+      <div class="grid g2">
+        <div class="card threat"><h3>1. Висока відкритість економіки</h3><p>Експорт та імпорт разом становлять понад 130 % ВВП, тому коливання світового попиту й цін швидко передаються на національну економіку.</p></div>
+        <div class="card threat"><h3>2. Імпортозалежність в енергетиці</h3><p>Чистий імпорт енергії зріс до близько 33 % споживання (2019 р.), а частка відновлюваної енергії (17,2 %) поки нижча за 20 %. Це підсилює чутливість до цін на енергоносії.</p></div>
+        <div class="card threat"><h3>3. Інфляційні шоки</h3><p>Інфляція у 2022–2023 рр. становила 15,1 % та 10,7 %, що за пороговою шкалою відповідає абсолютній небезпеці та критичному рівню. Це знижує реальні доходи та підвищує вартість запозичень.</p></div>
+        <div class="card threat"><h3>4. Дефіцит поточного рахунку</h3><p>У 2021–2022 рр. сальдо поточного рахунку було від’ємним (до –4,5 % ВВП), що збільшує потребу у зовнішньому фінансуванні.</p></div>
+        <div class="card threat"><h3>5. Зростання державного боргу й дефіцит бюджету</h3><p>Борг загального уряду зріс із 30,0 % ВВП (2019 р.) до 44,0 % (2023 р.), а дефіцит бюджету у 2023 р. перевищив ліміт ЄС у 3 %. Це звужує простір для фіскальної політики.</p></div>
+        <div class="card threat"><h3>6. Нестабільність аграрного виробництва</h3><p>Урожайність зернових коливається від 52,0 до 63,2 ц/га, що створює ризики для пропозиції зерна та цін на продовольство.</p></div>
+        <div class="card threat"><h3>7. Демографічні та медичні шоки</h3><p>Зниження тривалості життя на 2 роки у 2019–2021 рр. показало вразливість до епідемічних загроз, що впливають на трудові ресурси й навантаження на охорону здоров’я.</p></div>
+      </div>
+    </section>
+
+    <section id="conclusion">
+      <h2>Загальний висновок</h2>
+      <div class="card conclusion">
+        <p>За проаналізованими показниками економічна безпека Чехії є помірно стійкою. Сильними сторонами є низьке безробіття (2,0–2,8 % після 2019 р.), оптимальна інфляція у 2024 р. (2,4 %), стабільне перевищення експорту над імпортом (коефіцієнт покриття 1,01–1,11), зростання заощаджень (28,9 % ВНД) і найвища за період тривалість життя (79,98 року).</p>
+        <p>Проблемними залишаються надзвичайно висока відкритість економіки (понад 130 % ВВП), зростання імпортозалежності в енергетиці та низька частка відновлюваної енергії, інфляційний шок 2022–2023 рр., дефіцит поточного рахунку у 2021–2022 рр. і підвищене боргове навантаження.</p>
+        <p>Перспективи зміцнення безпеки пов’язані з розвитком відновлюваної енергетики, диверсифікацією зовнішньої торгівлі, утриманням інфляції в діапазоні 2–3 %, консолідацією державних фінансів і спрямуванням заощаджень в інвестиції.</p>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>Джерела статистичних даних</h2>
+      <div class="card">
+        <ul class="sources">
+          <li>Світовий банк, World Development Indicators (Чехія): <a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?locations=CZ" target="_blank" rel="noopener">ВВП</a>, <a href="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=CZ" target="_blank" rel="noopener">інфляція</a>, <a href="https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS?locations=CZ" target="_blank" rel="noopener">безробіття</a>, <a href="https://data.worldbank.org/indicator/NE.EXP.GNFS.ZS?locations=CZ" target="_blank" rel="noopener">експорт</a>, <a href="https://data.worldbank.org/indicator/NE.IMP.GNFS.ZS?locations=CZ" target="_blank" rel="noopener">імпорт</a>, <a href="https://data.worldbank.org/indicator/BN.CAB.XOKA.GD.ZS?locations=CZ" target="_blank" rel="noopener">поточний рахунок</a>, <a href="https://data.worldbank.org/indicator/NY.GNS.ICTR.GN.ZS?locations=CZ" target="_blank" rel="noopener">валові заощадження</a>, <a href="https://data.worldbank.org/indicator/GC.DOD.TOTL.GD.ZS?locations=CZ" target="_blank" rel="noopener">борг центрального уряду</a>.</li>
+          <li>Світовий банк: <a href="https://data.worldbank.org/indicator/EG.IMP.CONS.ZS?locations=CZ" target="_blank" rel="noopener">чистий імпорт енергії</a>, <a href="https://data.worldbank.org/indicator/EG.FEC.RNEW.ZS?locations=CZ" target="_blank" rel="noopener">частка відновлюваної енергії</a>, <a href="https://data.worldbank.org/indicator/AG.YLD.CREL.KG?locations=CZ" target="_blank" rel="noopener">урожайність зернових</a>, <a href="https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CZ" target="_blank" rel="noopener">тривалість життя</a>.</li>
+          <li>Чеське статистичне управління (ČSÚ), повідомлення про дефіцит і борг загального уряду (дані для Eurostat): <a href="https://csu.gov.cz/csu/czso/ari/notification-of-government-deficit-and-debt-2023-first-notification-data-notified-by-eurostat" target="_blank" rel="noopener">повідомлення за 2023 р.</a>; <a href="https://www.czso.cz/csu/czso/ari/notification-of-government-deficit-and-debt-2022-second-notification-data-sent-to-eurostat" target="_blank" rel="noopener">за 2022 р.</a></li>
+          <li>Eurostat: <a href="https://ec.europa.eu/eurostat/databrowser/view/tipsgo10/default/table?lang=en" target="_blank" rel="noopener">державний борг загального уряду (tipsgo10)</a>.</li>
+          <li>Порогові значення рівнів безпеки: навчальні матеріали дисципліни «Інформаційні технології у системі забезпечення економічної безпеки держави» (викладач — проф. Токар В. В.).</li>
+        </ul>
+        <p class="note">Частину показників Світового банку наведено в округленому вигляді; дані за останні роки можуть уточнюватися джерелами.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Автор: <strong>Третяк Марія Євгенівна</strong> · 2026 · <a href="index.html" style="color:#9fc1ff">Про автора</a></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
